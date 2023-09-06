@@ -1,1 +1,1 @@
-# A simple Grup ChatApp using Socket.io
+# A simple group ChatApp using Socket.io
