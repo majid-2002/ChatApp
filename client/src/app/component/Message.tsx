@@ -17,6 +17,7 @@ const Message = ({ userName }: { userName: string }) => {
       console.log("Connected to the server");
     });
 
+    //? Receive message from the server
     socket.on("message", (msg) => {
       console.log("received message", msg);
       setMessages([...messages, msg]);
@@ -27,6 +28,7 @@ const Message = ({ userName }: { userName: string }) => {
     };
   }, [messages]);
 
+  //? Send message to the server
   const sendMessage = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const socket = io(BaseUrl);
